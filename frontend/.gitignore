@@ -10,6 +10,8 @@
 /backend/env/
 /backend/venv/
 /backend/instance/
+/backend/venv/
+
 
 # Misc
 .DS_Store
