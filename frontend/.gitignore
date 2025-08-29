@@ -3,7 +3,7 @@
 /frontend/.pnp
 /frontend/.pnp.js
 /frontend/coverage/
-/frontend/build/
+
 
 /backend/__pycache__/
 /backend/*.pyc
