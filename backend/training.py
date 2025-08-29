@@ -6,13 +6,16 @@ from sklearn.metrics import classification_report, accuracy_score
 import joblib
 import os
 
-# Paths
-DATA_PATH = "data/Resume.csv"            # Path to your dataset
-MODEL_PATH = "models/resume_model.pkl"   # Path to save model
-VECTORIZER_PATH = "models/vectorizer.pkl" # Path to save vectorizer
+# Base directory (directory of this script)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Paths relative to BASE_DIR
+DATA_PATH = os.path.join(BASE_DIR, "data", "Resume.csv")  # Path to your dataset
+MODEL_PATH = os.path.join(BASE_DIR, "models", "resume_model.pkl")  # Path to save model
+VECTORIZER_PATH = os.path.join(BASE_DIR, "models", "vectorizer.pkl")  # Path to save vectorizer
 
 # Ensure model directory exists
-os.makedirs("models", exist_ok=True)
+os.makedirs(os.path.join(BASE_DIR, "models"), exist_ok=True)
 
 # 1. Load Dataset
 df = pd.read_csv(DATA_PATH)
